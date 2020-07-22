@@ -36,7 +36,7 @@ code_clipboard: true
 ## 获取主页区块列表信息
 
 ```json
-curl "http://IP:7216/sharder"
+curl "http://IP:7216/sharder?requestType=getBizBlocks&firstIndex=0&lastIndex=10"
 ```
 
 > Response:
@@ -136,27 +136,27 @@ firstIndex | true | 数据条数起始索引
 | height               | true     | 区块高度                                              |
 | payloadLength        |          |                                                       |
 | timestamp            | true     | 加上创世纪时间为交易时间(创世纪时间由常量信息API获取) |
-| generator            |          |                                                       |
-| generatorRS          |          |                                                       |
+| generator            |          | MW 地址元数据                                         |
+| generatorRS          |          | MW 地址                                               |
 | type                 | true     | 交易类型(0为转账，9为出块)                            |
-| confirmations        |          |                                                       |
+| confirmations        |          | 区块高度确认值（当前交易区块ID同当前最高区块高度差异值）  |
 | transactionId        | true     | 交易ID                                                |
 | hash                 | true     | 交易哈希                                              |
-| index                |          |                                                       |
+| index                |          | 交易顺序号                                            |
 | amount               | true     | 交易金额                                              |
 | fee                  | true     | 交易手续费                                            |
 | sender               | true     | 发送方                                                |
 | recipient            | true     | 接收方                                                |
-| numberOfTransactions |          |                                                       |
-| blockId              |          |                                                       |
-| previousBlockId      |          |                                                       |
+| numberOfTransactions |          | 当前区块交易总数                                       |
+| blockId              |          | 区块ID                                                |
+| previousBlockId      |          | 上一区块ID                                            |
 | totalFee             | true     | 总手续费                                              |
 | totalAmount          | true     | 总交易成交额                                          |
 
 ## 获取统计数据
 
 ```json
-curl "http://IP:7216/sharder"
+curl "http://IP:7216/sharder?requestType=getTxStatistics"
 ```
 
 > Response:
@@ -187,18 +187,18 @@ curl "http://IP:7216/sharder"
 | ----------- | -------- | ----------------------------------- |
 | requestType | true     | 获取统计数据类(默认getTxStatistics) |
 
-Response Data
+### Response Data
 
 | Parameter             | 是否必须 | Description            |
 | --------------------- | -------- | ---------------------- |
 | transferCount24H      | true     | 24小时转账交易数量     |
-| coinBaseCount         |          |                        |
+| coinBaseCount         |          | 全网转账交易次数       |
 | storageDataLength24H  | true     | 24小时数据存储数据大小 |
 | storageDataLength     | true     | 全网数据存储数据大小   |
 | storageCount          | true     | 全网数据存储数量       |
-| poolCount             |          |                        |
+| poolCount             |          | 全网矿池交易次数       |
 | transferAmount        | true     | 全网转账交易金额数     |
-| requestProcessingTime | true     |                        |
+| requestProcessingTime | true     |                      |
 | transferCount         | true     | 全网转账交易数量       |
 | transferAmount24H     | true     | 24小时转账交易金额数   |
 | storageCount24H       | true     | 24小时数据存储数量     |
@@ -206,7 +206,7 @@ Response Data
 ## 获取区块链相关常量信息
 
 ```json
-curl "http://IP:7216/sharder"
+curl "http://IP:7216/sharder?requestType=getBizConstants"
 ```
 
 > Response:
@@ -238,7 +238,7 @@ curl "http://IP:7216/sharder"
 ## 获取区块最新高度
 
 ```json
-curl "http://IP:7216/sharder"
+curl "http://IP:7216/sharder?requestType=getLastBlockHeight"
 ```
 
 > Response:
@@ -271,7 +271,7 @@ Response Data
 ## 获取指定区块高度信息
 
 ```json
-curl "http://IP:7216/sharder"
+curl "http://IP:7216/sharder?requestType=getTransactions&height=10500&type=0&pageNo=1&pageSize=10"
 ```
 
 > Response:
@@ -335,29 +335,29 @@ curl "http://IP:7216/sharder"
 | Data                 | 是否必须 | Description                                           |
 | -------------------- | -------- | ----------------------------------------------------- |
 | height               | true     | 区块高度                                              |
-| payloadLength        |          |                                                       |
+| payloadLength        |          | 区块字节长度                                           |
 | timestamp            | true     | 加上创世纪时间为交易时间(创世纪时间由常量信息API获取) |
-| generator            |          |                                                       |
-| generatorRS          |          |                                                       |
+| generator            |          | MW 地址元数据                                          |
+| generatorRS          |          | MW 地址                                               |
 | type                 | true     | 交易类型(0为转账，9为出块)                            |
-| confirmations        |          |                                                       |
+| confirmations        |          | 区块高度确认值（当前交易区块ID同当前最高区块高度差异值）  |
 | transactionId        | true     | 交易ID                                                |
 | hash                 | true     | 交易哈希                                              |
-| index                |          |                                                       |
+| index                |          | 交易顺序号                                            |
 | amount               | true     | 交易金额                                              |
 | fee                  | true     | 交易手续费                                            |
 | sender               | true     | 发送方                                                |
 | recipient            | true     | 接收方                                                |
-| numberOfTransactions |          |                                                       |
-| blockId              |          |                                                       |
-| previousBlockId      |          |                                                       |
+| numberOfTransactions |          | 当前区块交易总数                                       |
+| blockId              |          | 区块ID                                                |
+| previousBlockId      |          | 上一区块ID                                            |
 | totalFee             | true     | 总手续费                                              |
 | totalAmount          | true     | 总交易成交额                                          |
 
 ## 获取账户地址信息
 
 ```json
-curl "http://IP:7216/sharder"
+curl "http://IP:7216/sharder?requestType=getAccountInfo&account=CDW-7ZUQ-VGGW-EUVW-CFKMS"
 ```
 
 > Response:
@@ -391,20 +391,20 @@ curl "http://IP:7216/sharder"
 
 | Data                  | 是否必须 | Description |
 | --------------------- | -------- | ----------- |
-| accountId             |          |             |
+| accountId             |          | MW 地址信息 |
 | balance               | true     | 账户余额    |
-| accountRS             | true     | 账户地址    |
+| accountRS             | true     | MW 地址    |
 | frozenBalance         |          |             |
 | forgedBalance         | true     | 出块奖励    |
 | publicKey             | true     | 公钥        |
 | requestProcessingTime |          |             |
-| account               |          |             |
+| account               |          | MW 地址信息  |
 | frozenBalanceNQT      |          |             |
 
 ## 获取账户交易记录
 
 ```json
-curl "http://IP:7216/sharder"
+curl "http://IP:7216/sharder?requestType=getAccountTxs&account=CDW-7ZUQ-VGGW-EUVW-CFKMS&firstIndex=0&lastIndex=9"
 ```
 
 > Response:
@@ -445,7 +445,7 @@ curl "http://IP:7216/sharder"
 | Parameter   | 是否必须 | Description                           |
 | ----------- | -------- | ------------------------------------- |
 | requestType | true     | 获取账户交易信息类(默认getAccountTxs) |
-| account     | true     | 账户地址                              |
+| account     | true     | MW 地址                              |
 | firstIndex  | true     | 数据起始索引                          |
 | lastIndex   | true     | 数据结束索引                          |
 
@@ -456,10 +456,10 @@ curl "http://IP:7216/sharder"
 | height        | true     | 区块高度                                              |
 | timestamp     | true     | 加上创世纪时间为交易时间(创世纪时间由常量信息API获取) |
 | type          | true     | 交易类型(0为转账，9为出块)                            |
-| confirmations |          |                                                       |
+| confirmations |          | 区块高度确认值（当前交易区块ID同当前最高区块高度差异值）  |
 | transactionId | true     | 交易ID                                                |
 | hash          | true     | 交易哈希                                              |
-| index         |          |                                                       |
+| index         |          | 交易顺序号                                            |
 | amount        | true     | 交易金额                                              |
 | fee           | true     | 交易手续费                                            |
 | sender        | true     | 发送方                                                |
