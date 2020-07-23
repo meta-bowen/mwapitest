@@ -320,6 +320,32 @@
             <a href="#api-2" class="toc-h1 toc-link" data-title="区块浏览器 API">区块浏览器 API</a>
               <ul class="toc-list-h2">
                   <li>
+                    <a href="#dd13298a31" class="toc-h2 toc-link" data-title="获取主页区块列表信息">获取主页区块列表信息</a>
+                  </li>
+                  <li>
+                    <a href="#7f7156681f" class="toc-h2 toc-link" data-title="获取统计数据">获取统计数据</a>
+                  </li>
+                  <li>
+                    <a href="#70ee83a95e" class="toc-h2 toc-link" data-title="获取区块链相关常量信息">获取区块链相关常量信息</a>
+                  </li>
+                  <li>
+                    <a href="#f898af7384" class="toc-h2 toc-link" data-title="获取区块最新高度">获取区块最新高度</a>
+                  </li>
+                  <li>
+                    <a href="#4bbc8b9fbd" class="toc-h2 toc-link" data-title="获取指定区块高度信息">获取指定区块高度信息</a>
+                  </li>
+                  <li>
+                    <a href="#467ac772dc" class="toc-h2 toc-link" data-title="获取账户地址信息">获取账户地址信息</a>
+                  </li>
+                  <li>
+                    <a href="#8286ab9070" class="toc-h2 toc-link" data-title="获取账户交易记录">获取账户交易记录</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-3" class="toc-h1 toc-link" data-title="链上浏览器 API">链上浏览器 API</a>
+              <ul class="toc-list-h2">
+                  <li>
                     <a href="#getlatestcosversion" class="toc-h2 toc-link" data-title="getLatestCosVersion">getLatestCosVersion</a>
                   </li>
                   <li>
@@ -400,7 +426,800 @@
 <p>文档右侧是针对请求参数以及响应结果的示例。</p>
 <h2 id='21d67c3c4c'>请求格式</h2>
 <p>所有 API 在所有挖矿程序中是一致提供，即访问任何矿机 IP+PORT 规则访问接口均可返回数据。</p>
-<h1 id='api-2'>区块浏览器 API</h1><h2 id='getlatestcosversion'>getLatestCosVersion</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://192.168.0.234:7216/sharder?requestType=getLatestCosVersion"</span>
+<h1 id='api-2'>区块浏览器 API</h1><h2 id='dd13298a31'>获取主页区块列表信息</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="err">curl</span><span class="w"> </span><span class="s2">"http://IP:7216/sharder?requestType=getBizBlocks&amp;firstIndex=0&amp;lastIndex=10"</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[{</span><span class="w">
+    </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">10461</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"payloadLength"</span><span class="p">:</span><span class="w"> </span><span class="mi">834</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">122235798</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"generator"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5941498711528046973"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"generatorRS"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CDW-62DX-M753-B6JT-7K5X6"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"transactions"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">10461</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">122235298</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"confirmations"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"transactionId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"18119931610634187444"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"b4f238decbed76fb3f94f11373055b53c327f702c2e960d4cf58281919de974e"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">135</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"fee"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"sender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CDW-M9L9-BMQK-RPB6-E3G4G"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"recipient"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CDW-2Y66-BHE8-5UJL-ALKRC"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">10461</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">122235466</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"confirmations"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"transactionId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3791869201739024234"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6a0766e4f26c9f341209879496a73b5f8ef769d983a4b590cceab2091b3fd25d"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"fee"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"sender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CDW-LE9X-VYZ8-YRCG-EWTL2"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"recipient"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CDW-D5EC-54XM-WSKP-2MCZU"</span><span class="w">
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="nl">"numberOfTransactions"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"blockId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4144647700667314519"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"previousBlockId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15264552310802187297"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"totalFee"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"totalAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">11478</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">10460</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"payloadLength"</span><span class="p">:</span><span class="w"> </span><span class="mi">1252</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">122235197</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"generator"</span><span class="p">:</span><span class="w"> </span><span class="s2">"13243166401848131907"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"generatorRS"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CDW-RJC5-PPFS-VTU9-DFBLH"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"transactions"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">10460</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">122234764</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"confirmations"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"transactionId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9388610240114304842"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4aa79b38450b4b82249cff11ae2f05301bad2303ec9af6cf662a3b0a9503fa60"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">196</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"fee"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"sender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CDW-M9L9-BMQK-RPB6-E3G4G"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"recipient"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CDW-5FJ6-HTMW-3RUS-ERXD4"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">10460</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">122234845</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"confirmations"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"transactionId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17131911732168208794"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9ab13b9ff3c6c0ed1b333d674a5e65849a08b0611c62c405bc8325242cc6543f"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">138</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"fee"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"sender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CDW-M9L9-BMQK-RPB6-E3G4G"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"recipient"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CDW-PBV3-2Z9X-ES49-87542"</span><span class="w">
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="nl">"numberOfTransactions"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"blockId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15264552310802187297"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"previousBlockId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12377623742819441789"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"totalFee"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"totalAmount"</span><span class="p">:</span><span class="w"> </span><span class="mf">2064.8</span><span class="w">
+</span><span class="p">}]</span><span class="w">
+</span></code></pre></div><h3 id='http-request'>HTTP Request</h3>
+<p><code>GET http://IP:7216/sharder</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>是否必须</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>requestType</td>
+<td>true</td>
+<td>获取主页区块高度类(默认getBizBlocks)</td>
+</tr>
+<tr>
+<td>firstIndex</td>
+<td>true</td>
+<td>数据条数起始索引</td>
+</tr>
+<tr>
+<td>lastIndex</td>
+<td>true</td>
+<td>数据条数结束索引</td>
+</tr>
+</tbody></table>
+<h3 id='response-data'>Response Data</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>是否必须</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>height</td>
+<td>true</td>
+<td>区块高度</td>
+</tr>
+<tr>
+<td>payloadLength</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>true</td>
+<td>加上创世纪时间为交易时间(创世纪时间由常量信息API获取)</td>
+</tr>
+<tr>
+<td>generator</td>
+<td></td>
+<td>MW 地址元数据</td>
+</tr>
+<tr>
+<td>generatorRS</td>
+<td></td>
+<td>MW 地址</td>
+</tr>
+<tr>
+<td>type</td>
+<td>true</td>
+<td>交易类型(0为转账，9为出块)</td>
+</tr>
+<tr>
+<td>confirmations</td>
+<td></td>
+<td>区块高度确认值（当前交易区块ID同当前最高区块高度差异值）</td>
+</tr>
+<tr>
+<td>transactionId</td>
+<td>true</td>
+<td>交易ID</td>
+</tr>
+<tr>
+<td>hash</td>
+<td>true</td>
+<td>交易哈希</td>
+</tr>
+<tr>
+<td>index</td>
+<td></td>
+<td>交易顺序号</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>true</td>
+<td>交易金额</td>
+</tr>
+<tr>
+<td>fee</td>
+<td>true</td>
+<td>交易手续费</td>
+</tr>
+<tr>
+<td>sender</td>
+<td>true</td>
+<td>发送方</td>
+</tr>
+<tr>
+<td>recipient</td>
+<td>true</td>
+<td>接收方</td>
+</tr>
+<tr>
+<td>numberOfTransactions</td>
+<td></td>
+<td>当前区块交易总数</td>
+</tr>
+<tr>
+<td>blockId</td>
+<td></td>
+<td>区块ID</td>
+</tr>
+<tr>
+<td>previousBlockId</td>
+<td></td>
+<td>上一区块ID</td>
+</tr>
+<tr>
+<td>totalFee</td>
+<td>true</td>
+<td>总手续费</td>
+</tr>
+<tr>
+<td>totalAmount</td>
+<td>true</td>
+<td>总交易成交额</td>
+</tr>
+</tbody></table>
+<h2 id='7f7156681f'>获取统计数据</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="err">curl</span><span class="w"> </span><span class="s2">"http://IP:7216/sharder?requestType=getTxStatistics"</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"transferCount24H"</span><span class="p">:</span><span class="w"> </span><span class="mi">344</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"coinBaseCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">10466</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"storageDataLength24H"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"storageDataLength"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"storageCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"poolCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"transferAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">263719243</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"transferCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">24306</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"transferAmount24H"</span><span class="p">:</span><span class="w"> </span><span class="mi">915804</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"storageCount24H"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET http://IP:7216/sharder</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>是否必须</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>requestType</td>
+<td>true</td>
+<td>获取统计数据类(默认getTxStatistics)</td>
+</tr>
+</tbody></table>
+<h3 id='response-data-2'>Response Data</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>是否必须</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>transferCount24H</td>
+<td>true</td>
+<td>24小时转账交易数量</td>
+</tr>
+<tr>
+<td>coinBaseCount</td>
+<td></td>
+<td>全网转账交易次数</td>
+</tr>
+<tr>
+<td>storageDataLength24H</td>
+<td>true</td>
+<td>24小时数据存储数据大小</td>
+</tr>
+<tr>
+<td>storageDataLength</td>
+<td>true</td>
+<td>全网数据存储数据大小</td>
+</tr>
+<tr>
+<td>storageCount</td>
+<td>true</td>
+<td>全网数据存储数量</td>
+</tr>
+<tr>
+<td>poolCount</td>
+<td></td>
+<td>全网矿池交易次数</td>
+</tr>
+<tr>
+<td>transferAmount</td>
+<td>true</td>
+<td>全网转账交易金额数</td>
+</tr>
+<tr>
+<td>requestProcessingTime</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>transferCount</td>
+<td>true</td>
+<td>全网转账交易数量</td>
+</tr>
+<tr>
+<td>transferAmount24H</td>
+<td>true</td>
+<td>24小时转账交易金额数</td>
+</tr>
+<tr>
+<td>storageCount24H</td>
+<td>true</td>
+<td>24小时数据存储数量</td>
+</tr>
+</tbody></table>
+<h2 id='70ee83a95e'>获取区块链相关常量信息</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="err">curl</span><span class="w"> </span><span class="s2">"http://IP:7216/sharder?requestType=getBizConstants"</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"epochBeginning"</span><span class="p">:</span><span class="w"> </span><span class="mi">1471334888880</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET http://IP:7216/sharder</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>是否必须</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>requestType</td>
+<td>true</td>
+<td>获取区块链相关常量信息类(默认getBizConstants)</td>
+</tr>
+</tbody></table>
+<h3 id='response-data-3'>Response Data</h3>
+<table><thead>
+<tr>
+<th>Data</th>
+<th>是否必须</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>epochBeginning</td>
+<td>true</td>
+<td>创世时间</td>
+</tr>
+<tr>
+<td>requestProcessingTime</td>
+<td>false</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='f898af7384'>获取区块最新高度</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="err">curl</span><span class="w"> </span><span class="s2">"http://IP:7216/sharder?requestType=getLastBlockHeight"</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">10461</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET http://IP:7216/sharder</code></p>
+<h3 id='url-parameters-3'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>是否必须</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>requestType</td>
+<td>true</td>
+<td>获取区块最新高度类(默认getLastBlockHeight)</td>
+</tr>
+</tbody></table>
+
+<p>Response Data</p>
+
+<table><thead>
+<tr>
+<th>Data</th>
+<th>是否必须</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>height</td>
+<td>true</td>
+<td>区块高度</td>
+</tr>
+<tr>
+<td>requestProcessingTime</td>
+<td>false</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='4bbc8b9fbd'>获取指定区块高度信息</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="err">curl</span><span class="w"> </span><span class="s2">"http://IP:7216/sharder?requestType=getTransactions&amp;height=10500&amp;type=0&amp;pageNo=1&amp;pageSize=10"</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[{</span><span class="w">
+    </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">9739</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"payloadLength"</span><span class="p">:</span><span class="w"> </span><span class="mi">2106</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">121801612</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"generator"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16774301533949110090"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"generatorRS"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CDW-9BUC-DVZ7-799H-GCLLK"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"transactions"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">9739</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">121801361</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"confirmations"</span><span class="p">:</span><span class="w"> </span><span class="mi">729</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"transactionId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11143166863639983096"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f8332a34397ba49a4230d3aef7d14c68fc581726ce71c75da2dbf335b9499929"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"fee"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"sender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CDW-MT45-DF9U-ZGJE-32K3D"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"recipient"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CDW-J76A-GJYB-KG36-HCF8M"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">9739</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">121801479</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"confirmations"</span><span class="p">:</span><span class="w"> </span><span class="mi">729</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"transactionId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1364780910761681023"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7f202fe601adf012ad356ba69186fe2df67ef5553614a7e653cd624e1e92a73c"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"fee"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"sender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CDW-6JBY-5J87-LVNL-6LW9U"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"recipient"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CDW-J76A-GJYB-KG36-HCF8M"</span><span class="w">
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="nl">"numberOfTransactions"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"blockId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9666004775109083975"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"previousBlockId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"14251166280691501714"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"totalFee"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.00000007</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"totalAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">1645</span><span class="w">
+</span><span class="p">}]</span><span class="w">
+</span></code></pre></div><h3 id='http-request-5'>HTTP Request</h3>
+<p><code>GET http://IP:7216/sharder</code></p>
+<h3 id='url-parameters-4'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>是否必须</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>requestType</td>
+<td>true</td>
+<td>获取指定区块高度类(默认getTransactions)</td>
+</tr>
+<tr>
+<td>height</td>
+<td>true</td>
+<td>区块高度</td>
+</tr>
+<tr>
+<td>type</td>
+<td>true</td>
+<td>数据类型（ 0代表转账，9代表出块 ）</td>
+</tr>
+<tr>
+<td>pageNo</td>
+<td>true</td>
+<td>获取数据起始索引</td>
+</tr>
+<tr>
+<td>pageSize</td>
+<td>true</td>
+<td>获取数据结束索引</td>
+</tr>
+</tbody></table>
+<h3 id='response-data-4'>Response Data</h3>
+<table><thead>
+<tr>
+<th>Data</th>
+<th>是否必须</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>height</td>
+<td>true</td>
+<td>区块高度</td>
+</tr>
+<tr>
+<td>payloadLength</td>
+<td></td>
+<td>区块字节长度</td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>true</td>
+<td>加上创世纪时间为交易时间(创世纪时间由常量信息API获取)</td>
+</tr>
+<tr>
+<td>generator</td>
+<td></td>
+<td>MW 地址元数据</td>
+</tr>
+<tr>
+<td>generatorRS</td>
+<td></td>
+<td>MW 地址</td>
+</tr>
+<tr>
+<td>type</td>
+<td>true</td>
+<td>交易类型(0为转账，9为出块)</td>
+</tr>
+<tr>
+<td>confirmations</td>
+<td></td>
+<td>区块高度确认值（当前交易区块ID同当前最高区块高度差异值）</td>
+</tr>
+<tr>
+<td>transactionId</td>
+<td>true</td>
+<td>交易ID</td>
+</tr>
+<tr>
+<td>hash</td>
+<td>true</td>
+<td>交易哈希</td>
+</tr>
+<tr>
+<td>index</td>
+<td></td>
+<td>交易顺序号</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>true</td>
+<td>交易金额</td>
+</tr>
+<tr>
+<td>fee</td>
+<td>true</td>
+<td>交易手续费</td>
+</tr>
+<tr>
+<td>sender</td>
+<td>true</td>
+<td>发送方</td>
+</tr>
+<tr>
+<td>recipient</td>
+<td>true</td>
+<td>接收方</td>
+</tr>
+<tr>
+<td>numberOfTransactions</td>
+<td></td>
+<td>当前区块交易总数</td>
+</tr>
+<tr>
+<td>blockId</td>
+<td></td>
+<td>区块ID</td>
+</tr>
+<tr>
+<td>previousBlockId</td>
+<td></td>
+<td>上一区块ID</td>
+</tr>
+<tr>
+<td>totalFee</td>
+<td>true</td>
+<td>总手续费</td>
+</tr>
+<tr>
+<td>totalAmount</td>
+<td>true</td>
+<td>总交易成交额</td>
+</tr>
+</tbody></table>
+<h2 id='467ac772dc'>获取账户地址信息</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="err">curl</span><span class="w"> </span><span class="s2">"http://IP:7216/sharder?requestType=getAccountInfo&amp;account=CDW-7ZUQ-VGGW-EUVW-CFKMS"</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"accountId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5941498711528046973"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"balance"</span><span class="p">:</span><span class="w"> </span><span class="mf">1479.00000006</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"accountRS"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CDW-62DX-M753-B6JT-7K5X6"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"frozenBalance"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"forgedBalance"</span><span class="p">:</span><span class="w"> </span><span class="mf">14698.00000006</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"publicKey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"e91e148f62ed97e2689a86a638a6d87dec5aea467353bc1f3651269b5f167859"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"account"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5941498711528046973"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"frozenBalanceNQT"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='http-request-6'>HTTP Request</h3>
+<p><code>GET http://IP:7216/sharder</code></p>
+<h3 id='url-parameters-5'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>是否必须</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>requestType</td>
+<td>true</td>
+<td>获取账户信息类(默认getAccountInfo)</td>
+</tr>
+<tr>
+<td>account</td>
+<td>true</td>
+<td>账户地址</td>
+</tr>
+</tbody></table>
+<h3 id='response-data-5'>Response Data</h3>
+<table><thead>
+<tr>
+<th>Data</th>
+<th>是否必须</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>accountId</td>
+<td></td>
+<td>MW 地址信息</td>
+</tr>
+<tr>
+<td>balance</td>
+<td>true</td>
+<td>账户余额</td>
+</tr>
+<tr>
+<td>accountRS</td>
+<td>true</td>
+<td>MW 地址</td>
+</tr>
+<tr>
+<td>frozenBalance</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>forgedBalance</td>
+<td>true</td>
+<td>出块奖励</td>
+</tr>
+<tr>
+<td>publicKey</td>
+<td>true</td>
+<td>公钥</td>
+</tr>
+<tr>
+<td>requestProcessingTime</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>account</td>
+<td></td>
+<td>MW 地址信息</td>
+</tr>
+<tr>
+<td>frozenBalanceNQT</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='8286ab9070'>获取账户交易记录</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="err">curl</span><span class="w"> </span><span class="s2">"http://IP:7216/sharder?requestType=getAccountTxs&amp;account=CDW-7ZUQ-VGGW-EUVW-CFKMS&amp;firstIndex=0&amp;lastIndex=9"</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">10461</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">122235798</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"confirmations"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"transactionId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5850549255532855839"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1f42f6e48c5331512fda3294748e11b7c99ca310b0b27597e665ca886f8e40ff"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">1333</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"fee"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"sender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CDW-62DX-M753-B6JT-7K5X6"</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">9648</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">121746646</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"confirmations"</span><span class="p">:</span><span class="w"> </span><span class="mi">819</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"transactionId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9496177762981627047"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a7c47bce5c33c9830b56c1c991c9945fdfb1ebf040c24488a7a80928405ec9d7"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">1330</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"fee"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"sender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CDW-62DX-M753-B6JT-7K5X6"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"recipient"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CDW-Y7HY-PH5L-ECH6-9DMUJ"</span><span class="w">
+</span><span class="p">}]</span><span class="w">
+</span></code></pre></div><h3 id='http-request-7'>HTTP Request</h3>
+<p><code>GET http://IP:7216/sharder</code></p>
+<h3 id='url-parameters-6'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>是否必须</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>requestType</td>
+<td>true</td>
+<td>获取账户交易信息类(默认getAccountTxs)</td>
+</tr>
+<tr>
+<td>account</td>
+<td>true</td>
+<td>MW 地址</td>
+</tr>
+<tr>
+<td>firstIndex</td>
+<td>true</td>
+<td>数据起始索引</td>
+</tr>
+<tr>
+<td>lastIndex</td>
+<td>true</td>
+<td>数据结束索引</td>
+</tr>
+</tbody></table>
+<h3 id='response-data-6'>Response Data</h3>
+<table><thead>
+<tr>
+<th>Data</th>
+<th>是否必须</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>height</td>
+<td>true</td>
+<td>区块高度</td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>true</td>
+<td>加上创世纪时间为交易时间(创世纪时间由常量信息API获取)</td>
+</tr>
+<tr>
+<td>type</td>
+<td>true</td>
+<td>交易类型(0为转账，9为出块)</td>
+</tr>
+<tr>
+<td>confirmations</td>
+<td></td>
+<td>区块高度确认值（当前交易区块ID同当前最高区块高度差异值）</td>
+</tr>
+<tr>
+<td>transactionId</td>
+<td>true</td>
+<td>交易ID</td>
+</tr>
+<tr>
+<td>hash</td>
+<td>true</td>
+<td>交易哈希</td>
+</tr>
+<tr>
+<td>index</td>
+<td></td>
+<td>交易顺序号</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>true</td>
+<td>交易金额</td>
+</tr>
+<tr>
+<td>fee</td>
+<td>true</td>
+<td>交易手续费</td>
+</tr>
+<tr>
+<td>sender</td>
+<td>true</td>
+<td>发送方</td>
+</tr>
+<tr>
+<td>recipient</td>
+<td>true</td>
+<td>接收方</td>
+</tr>
+</tbody></table>
+<h1 id='api-3'>链上浏览器 API</h1><h2 id='getlatestcosversion'>getLatestCosVersion</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://IP:7216/sharder?requestType=getLatestCosVersion"</span>
 </code></pre></div>
 <blockquote>
 <p>Response:</p>
@@ -415,9 +1234,9 @@
     </span><span class="nl">"bakMode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"delete"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://192.168.0.234:7216/sharder</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+</span></code></pre></div><h3 id='http-request-8'>HTTP Request</h3>
+<p><code>GET http://IP:7216/sharder</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -431,7 +1250,7 @@
 <td>获取版本信息定值(getLatestCosVersion)</td>
 </tr>
 </tbody></table>
-<h3 id='response-data'>Response Data</h3>
+<h3 id='response-data-7'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -470,7 +1289,7 @@
 <td></td>
 </tr>
 </tbody></table>
-<h2 id='getblockchaintransactions'>getBlockchainTransactions</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://192.168.0.234:7216/sharder?requestType=getBlockchainTransactions&amp;account=CDW-BRNL-6BXD-TM34-5PMMZ&amp;firstIndex=0&amp;lastIndex=9&amp;type=9"</span>
+<h2 id='getblockchaintransactions'>getBlockchainTransactions</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://IP:7216/sharder?requestType=getBlockchainTransactions&amp;account=CDW-BRNL-6BXD-TM34-5PMMZ&amp;firstIndex=0&amp;lastIndex=9&amp;type=9"</span>
 </code></pre></div>
 <blockquote>
 <p>Response:</p>
@@ -547,9 +1366,9 @@
       </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">11532</span><span class="w">
     </span><span class="p">}]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://192.168.0.234:7216/sharder</code></p>
-<h3 id='query-parameters-2'>Query Parameters</h3>
+</span></code></pre></div><h3 id='http-request-9'>HTTP Request</h3>
+<p><code>GET http://IP:7216/sharder</code></p>
+<h3 id='query-parameters-3'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -583,7 +1402,7 @@
 <td>数据类型(0转账,9出块,12节点声明)</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-2'>Response Data</h3>
+<h3 id='response-data-8'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -742,7 +1561,7 @@
 <td>创建者账户ID</td>
 </tr>
 </tbody></table>
-<h2 id='getpeers'>getPeers</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://192.168.0.234:7216/sharder?requestType=getPeers&amp;state=CONNECTED&amp;random=0.5637220664429662&amp;includeOwn=true&amp;includePeerInfo=true"</span>
+<h2 id='getpeers'>getPeers</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://IP:7216/sharder?requestType=getPeers&amp;state=CONNECTED&amp;random=0.5637220664429662&amp;includeOwn=true&amp;includePeerInfo=true"</span>
 </code></pre></div>
 <blockquote>
 <p>Response 1:</p>
@@ -896,9 +1715,9 @@
     </span><span class="p">}]</span><span class="err">,</span><span class="w">
   </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-3'>HTTP Request</h3>
-<p><code>GET http://192.168.0.234:7216/sharder</code></p>
-<h3 id='query-parameters-3'>Query Parameters</h3>
+</span></code></pre></div><h3 id='http-request-10'>HTTP Request</h3>
+<p><code>GET http://IP:7216/sharder</code></p>
+<h3 id='query-parameters-4'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -932,7 +1751,7 @@
 <td>默认false,当为true时返回所有声明信息</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-3'>Response Data</h3>
+<h3 id='response-data-9'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1091,7 +1910,7 @@
 <td></td>
 </tr>
 </tbody></table>
-<h2 id='getunconfirmedtransactions'>getUnconfirmedTransactions</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://192.168.0.234:7216/sharder?requestType=getUnconfirmedTransactions&amp;random=1595057247203&amp;account=4597741060539866770"</span>
+<h2 id='getunconfirmedtransactions'>getUnconfirmedTransactions</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://IP:7216/sharder?requestType=getUnconfirmedTransactions&amp;random=1595057247203&amp;account=4597741060539866770"</span>
 </code></pre></div>
 <blockquote>
 <p>Response:</p>
@@ -1102,9 +1921,9 @@
   </span><span class="p">],</span><span class="w">
   </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-4'>HTTP Request</h3>
-<p><code>GET http://192.168.0.234:7216/sharder</code></p>
-<h3 id='query-parameters-4'>Query Parameters</h3>
+</span></code></pre></div><h3 id='http-request-11'>HTTP Request</h3>
+<p><code>GET http://IP:7216/sharder</code></p>
+<h3 id='query-parameters-5'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1128,7 +1947,7 @@
 <td>随机数</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-4'>Response Data</h3>
+<h3 id='response-data-10'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1147,7 +1966,7 @@
 <td>未确认的交易</td>
 </tr>
 </tbody></table>
-<h2 id='getuserconfig'>getUserConfig</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://192.168.0.234:7216/sharder?requestType=getUserConfig&amp;random=1595057242079"</span>
+<h2 id='getuserconfig'>getUserConfig</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://IP:7216/sharder?requestType=getUserConfig&amp;random=1595057242079"</span>
 </code></pre></div>
 <blockquote>
 <p>Response:</p>
@@ -1191,9 +2010,9 @@
   </span><span class="nl">"sharder.maxNumberOfShufflers"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"sharder.NATServiceAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-5'>HTTP Request</h3>
-<p><code>GET http://192.168.0.234:7216/sharder</code></p>
-<h3 id='query-parameters-5'>Query Parameters</h3>
+</span></code></pre></div><h3 id='http-request-12'>HTTP Request</h3>
+<p><code>GET http://IP:7216/sharder</code></p>
+<h3 id='query-parameters-6'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1212,7 +2031,7 @@
 <td>随机数</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-5'>Response Data</h3>
+<h3 id='response-data-11'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1406,7 +2225,7 @@
 <td></td>
 </tr>
 </tbody></table>
-<h2 id='getblockchainstatus'>getBlockchainStatus</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://192.168.0.234:7216/sharder?requestType=getBlockchainStatus&amp;random=0.5325304383349927"</span>
+<h2 id='getblockchainstatus'>getBlockchainStatus</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://IP:7216/sharder?requestType=getBlockchainStatus&amp;random=0.5325304383349927"</span>
 </code></pre></div>
 <blockquote>
 <p>Response:</p>
@@ -1449,9 +2268,9 @@
   </span><span class="nl">"cosLastUpgradeDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-06-09 01:01:01"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"lastBlockchainFeeder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testboot.mw.run"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-6'>HTTP Request</h3>
-<p><code>GET http://192.168.0.234:7216/sharder</code></p>
-<h3 id='query-parameters-6'>Query Parameters</h3>
+</span></code></pre></div><h3 id='http-request-13'>HTTP Request</h3>
+<p><code>GET http://IP:7216/sharder</code></p>
+<h3 id='query-parameters-7'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1470,7 +2289,7 @@
 <td>随机数</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-6'>Response Data</h3>
+<h3 id='response-data-12'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1634,7 +2453,7 @@
 <td></td>
 </tr>
 </tbody></table>
-<h2 id='getaccount'>getAccount</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://192.168.0.234:7216/sharder?requestType=getAccount&amp;account=4597741060539866770&amp;includeAssets=true&amp;includeCurrencies=true&amp;includeLessors=true&amp;includeEffectiveBalance=true&amp;random=0.08781158929285926"</span>
+<h2 id='getaccount'>getAccount</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://IP:7216/sharder?requestType=getAccount&amp;account=4597741060539866770&amp;includeAssets=true&amp;includeCurrencies=true&amp;includeLessors=true&amp;includeEffectiveBalance=true&amp;random=0.08781158929285926"</span>
 </code></pre></div>
 <blockquote>
 <p>Response:</p>
@@ -1653,9 +2472,9 @@
   </span><span class="nl">"account"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4597741060539866770"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"frozenBalanceNQT"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-7'>HTTP Request</h3>
-<p><code>GET http://192.168.0.234:7216/sharder</code></p>
-<h3 id='query-parameters-7'>Query Parameters</h3>
+</span></code></pre></div><h3 id='http-request-14'>HTTP Request</h3>
+<p><code>GET http://IP:7216/sharder</code></p>
+<h3 id='query-parameters-8'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1699,7 +2518,7 @@
 <td>是否包含有效余额默认false</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-7'>Response Data</h3>
+<h3 id='response-data-13'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1768,7 +2587,7 @@
 <td>冻结金额</td>
 </tr>
 </tbody></table>
-<h2 id='getforging'>getForging</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://192.168.0.234:7216/sharder?requestType=getForging"</span>
+<h2 id='getforging'>getForging</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://IP:7216/sharder?requestType=getForging"</span>
 </code></pre></div>
 <blockquote>
 <p>Response:</p>
@@ -1801,9 +2620,9 @@
     </span><span class="p">}],</span><span class="w">
     </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-8'>HTTP Request</h3>
-<p><code>POST http://192.168.0.234:7216/sharder</code></p>
-<h3 id='query-parameters-8'>Query Parameters</h3>
+</span></code></pre></div><h3 id='http-request-15'>HTTP Request</h3>
+<p><code>POST http://IP:7216/sharder</code></p>
+<h3 id='query-parameters-9'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1841,7 +2660,7 @@
 <td>是否为矿池</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-8'>Response Data</h3>
+<h3 id='response-data-14'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Data</th>
@@ -1955,7 +2774,7 @@
 <td>预计出块时间</td>
 </tr>
 </tbody></table>
-<h2 id='stopmining'>stopMining</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://192.168.0.234:7216/sharder?requestType=stopMining"</span>
+<h2 id='stopmining'>stopMining</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://IP:7216/sharder?requestType=stopMining"</span>
 </code></pre></div>
 <blockquote>
 <p>Response:</p>
@@ -1965,9 +2784,9 @@
     </span><span class="nl">"forgersCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-9'>HTTP Request</h3>
-<p><code>POST http://192.168.0.234:7216/sharder</code></p>
-<h3 id='query-parameters-9'>Query Parameters</h3>
+</span></code></pre></div><h3 id='http-request-16'>HTTP Request</h3>
+<p><code>POST http://IP:7216/sharder</code></p>
+<h3 id='query-parameters-10'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1981,7 +2800,7 @@
 <td>定值(stopMining)</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-9'>Response Data</h3>
+<h3 id='response-data-15'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2005,7 +2824,7 @@
 <td>请求响应时间</td>
 </tr>
 </tbody></table>
-<h2 id='getdgspurchasecount'>getDGSPurchaseCount</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://192.168.0.234:7216/sharder?requestType=getDGSPurchaseCount&amp;seller=4597741060539866770&amp;completed=true&amp;random=0.852988454945699"</span>
+<h2 id='getdgspurchasecount'>getDGSPurchaseCount</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://IP:7216/sharder?requestType=getDGSPurchaseCount&amp;seller=4597741060539866770&amp;completed=true&amp;random=0.852988454945699"</span>
 </code></pre></div>
 <blockquote>
 <p>Response:</p>
@@ -2014,9 +2833,9 @@
   </span><span class="nl">"numberOfPurchases"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-10'>HTTP Request</h3>
-<p><code>GET http://192.168.0.234:7216/sharder</code></p>
-<h3 id='query-parameters-10'>Query Parameters</h3>
+</span></code></pre></div><h3 id='http-request-17'>HTTP Request</h3>
+<p><code>GET http://IP:7216/sharder</code></p>
+<h3 id='query-parameters-11'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2050,7 +2869,7 @@
 <td>随机数</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-10'>Response Data</h3>
+<h3 id='response-data-16'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2069,7 +2888,7 @@
 <td>请求处理时间</td>
 </tr>
 </tbody></table>
-<h2 id='getdgspendingpurchases'>getDGSPendingPurchases</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://192.168.0.234:7216/sharder?requestType=getDGSPendingPurchases&amp;seller=4597741060539866770&amp;random=0.6369620754760852"</span>
+<h2 id='getdgspendingpurchases'>getDGSPendingPurchases</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://IP:7216/sharder?requestType=getDGSPendingPurchases&amp;seller=4597741060539866770&amp;random=0.6369620754760852"</span>
 </code></pre></div>
 <blockquote>
 <p>Response:</p>
@@ -2080,9 +2899,9 @@
   </span><span class="p">],</span><span class="w">
   </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-11'>HTTP Request</h3>
-<p><code>GET http://192.168.0.234:7216/sharder</code></p>
-<h3 id='query-parameters-11'>Query Parameters</h3>
+</span></code></pre></div><h3 id='http-request-18'>HTTP Request</h3>
+<p><code>GET http://IP:7216/sharder</code></p>
+<h3 id='query-parameters-12'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2106,7 +2925,7 @@
 <td>随机数</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-11'>Response Data</h3>
+<h3 id='response-data-17'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2128,7 +2947,7 @@
 
 <span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
 <span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://192.168.0.234:7216/sharder?requestType=getAliasCount&amp;account=4597741060539866770&amp;random=0.21013835024125904"</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://IP:7216/sharder?requestType=getAliasCount&amp;account=4597741060539866770&amp;random=0.21013835024125904"</span>
   <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
 
@@ -2142,9 +2961,9 @@
   </span><span class="nl">"numberOfAliases"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-12'>HTTP Request</h3>
-<p><code>GET http://192.168.0.234:7216/sharder</code></p>
-<h3 id='query-parameters-12'>Query Parameters</h3>
+</span></code></pre></div><h3 id='http-request-19'>HTTP Request</h3>
+<p><code>GET http://IP:7216/sharder</code></p>
+<h3 id='query-parameters-13'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2168,7 +2987,7 @@
 <td>随机数</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-12'>Response Data</h3>
+<h3 id='response-data-18'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2187,7 +3006,7 @@
 <td>别名数量</td>
 </tr>
 </tbody></table>
-<h2 id='getlasttrades'>getLastTrades</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://192.168.0.234:7216/sharder?requestType=getLastTrades&amp;assets=25461532156"</span>
+<h2 id='getlasttrades'>getLastTrades</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://IP:7216/sharder?requestType=getLastTrades&amp;assets=25461532156"</span>
 </code></pre></div>
 <blockquote>
 <p>Response:</p>
@@ -2198,9 +3017,9 @@
   </span><span class="p">],</span><span class="w">
   </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-13'>HTTP Request</h3>
-<p><code>GET http://192.168.0.234:7216/sharder</code></p>
-<h3 id='query-parameters-13'>Query Parameters</h3>
+</span></code></pre></div><h3 id='http-request-20'>HTTP Request</h3>
+<p><code>GET http://IP:7216/sharder</code></p>
+<h3 id='query-parameters-14'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2219,7 +3038,7 @@
 <td>随机数</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-13'>Response Data</h3>
+<h3 id='response-data-19'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2233,7 +3052,7 @@
 <td>请求处理时间</td>
 </tr>
 </tbody></table>
-<h2 id='getvoterphasedtransactions'>getVoterPhasedTransactions</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://192.168.0.231:7216/sharder?requestType=getVoterPhasedTransactions&amp;account=265523835724773959&amp;firstIndex=0&amp;lastIndex=20&amp;random=0.02052225643621064"</span>
+<h2 id='getvoterphasedtransactions'>getVoterPhasedTransactions</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://IP:7216/sharder?requestType=getVoterPhasedTransactions&amp;account=265523835724773959&amp;firstIndex=0&amp;lastIndex=20&amp;random=0.02052225643621064"</span>
 </code></pre></div>
 <blockquote>
 <p>Response:</p>
@@ -2244,9 +3063,9 @@
 
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-14'>HTTP Request</h3>
-<p><code>GET http://192.168.0.234:7216/sharder</code></p>
-<h3 id='query-parameters-14'>Query Parameters</h3>
+</span></code></pre></div><h3 id='http-request-21'>HTTP Request</h3>
+<p><code>GET http://IP:7216/sharder</code></p>
+<h3 id='query-parameters-15'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2280,7 +3099,7 @@
 <td>随机数</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-14'>Response Data</h3>
+<h3 id='response-data-20'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2294,7 +3113,7 @@
 <td>请求处理时间</td>
 </tr>
 </tbody></table>
-<h2 id='getaccountpublickey'>getAccountPublicKey</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://192.168.0.234:7216/sharder?requestType=getAccountPublicKey&amp;account=4597741060539866770&amp;random=0.7889226609636362"</span>
+<h2 id='getaccountpublickey'>getAccountPublicKey</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://IP:7216/sharder?requestType=getAccountPublicKey&amp;account=4597741060539866770&amp;random=0.7889226609636362"</span>
 </code></pre></div>
 <blockquote>
 <p>Response:</p>
@@ -2303,9 +3122,9 @@
   </span><span class="nl">"publicKey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"269670d2f58d5d663dc469ab7cd42e36c096d2d488fb4c7b57279157cb87a417"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-15'>HTTP Request</h3>
-<p><code>GET http://192.168.0.234:7216/sharder</code></p>
-<h3 id='query-parameters-15'>Query Parameters</h3>
+</span></code></pre></div><h3 id='http-request-22'>HTTP Request</h3>
+<p><code>GET http://IP:7216/sharder</code></p>
+<h3 id='query-parameters-16'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2329,7 +3148,7 @@
 <td>随机数</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-15'>Response Data</h3>
+<h3 id='response-data-21'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2348,7 +3167,7 @@
 <td>请求处理时间</td>
 </tr>
 </tbody></table>
-<h2 id='getblock'>getBlock</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://192.168.0.234:7216/sharder?requestType=getBlock&amp;height=6212&amp;block=&amp;includeTransactions=true"</span>
+<h2 id='getblock'>getBlock</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://IP:7216/sharder?requestType=getBlock&amp;height=6212&amp;block=&amp;includeTransactions=true"</span>
 </code></pre></div>
 <blockquote>
 <p>Response:</p>
@@ -2445,9 +3264,9 @@
     </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">6212</span><span class="p">,</span><span class="w">
     </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">119666081</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-16'>HTTP Request</h3>
-<p><code>GET http://192.168.0.234:7216/sharder</code></p>
-<h3 id='query-parameters-16'>Query Parameters</h3>
+</span></code></pre></div><h3 id='http-request-23'>HTTP Request</h3>
+<p><code>GET http://IP:7216/sharder</code></p>
+<h3 id='query-parameters-17'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2476,7 +3295,7 @@
 <td>是否包含交易详情(默认false)</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-16'>Response Data</h3>
+<h3 id='response-data-22'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2720,7 +3539,7 @@
 <td>矿机IP</td>
 </tr>
 </tbody></table>
-<h2 id='getaccountid'>getAccountId</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://192.168.0.234:7216/sharder?requestType=getAccountId&amp;accoutId=-3532411906506360547,4597741060539866770"</span>
+<h2 id='getaccountid'>getAccountId</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://IP:7216/sharder?requestType=getAccountId&amp;accoutId=-3532411906506360547,4597741060539866770"</span>
 </code></pre></div>
 <blockquote>
 <p>Response:</p>
@@ -2738,9 +3557,9 @@
   </span><span class="p">],</span><span class="w">
   </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-17'>HTTP Request</h3>
-<p><code>GET http://192.168.0.234:7216/sharder</code></p>
-<h3 id='query-parameters-17'>Query Parameters</h3>
+</span></code></pre></div><h3 id='http-request-24'>HTTP Request</h3>
+<p><code>GET http://IP:7216/sharder</code></p>
+<h3 id='query-parameters-18'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2759,7 +3578,7 @@
 <td>账户ID</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-17'>Response Data</h3>
+<h3 id='response-data-23'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2783,7 +3602,7 @@
 <td>账户名</td>
 </tr>
 </tbody></table>
-<h2 id='gettransaction'>getTransaction</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://192.168.0.234:7216/sharder?requestType=getTransaction&amp;transaction=13854539770161423054"</span>
+<h2 id='gettransaction'>getTransaction</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://IP:7216/sharder?requestType=getTransaction&amp;transaction=13854539770161423054"</span>
 </code></pre></div>
 <blockquote>
 <p>Response:</p>
@@ -2823,9 +3642,9 @@
   </span><span class="nl">"ecBlockHeight"</span><span class="p">:</span><span class="w"> </span><span class="mi">5491</span><span class="err">,</span><span class="w">
   </span><span class="nl">"transaction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"13854539770161423054"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-18'>HTTP Request</h3>
-<p><code>GET http://192.168.0.234:7216/sharder</code></p>
-<h3 id='query-parameters-18'>Query Parameters</h3>
+</span></code></pre></div><h3 id='http-request-25'>HTTP Request</h3>
+<p><code>GET http://IP:7216/sharder</code></p>
+<h3 id='query-parameters-19'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2844,7 +3663,7 @@
 <td>交易ID</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-18'>Response Data</h3>
+<h3 id='response-data-24'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3003,7 +3822,7 @@
 <td>交易ID</td>
 </tr>
 </tbody></table>
-<h2 id='gettxstatistics'>getTxStatistics</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://192.168.0.234:7216/sharder?requestType=getTxStatistics"</span>
+<h2 id='gettxstatistics'>getTxStatistics</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://IP:7216/sharder?requestType=getTxStatistics"</span>
 </code></pre></div>
 <blockquote>
 <p>Response:</p>
@@ -3021,9 +3840,9 @@
   </span><span class="nl">"transferAmount24H"</span><span class="p">:</span><span class="w"> </span><span class="mi">2833361</span><span class="p">,</span><span class="w">
   </span><span class="nl">"storageCount24H"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-19'>HTTP Request</h3>
-<p><code>GET http://192.168.0.234:7216/sharder</code></p>
-<h3 id='query-parameters-19'>Query Parameters</h3>
+</span></code></pre></div><h3 id='http-request-26'>HTTP Request</h3>
+<p><code>GET http://IP:7216/sharder</code></p>
+<h3 id='query-parameters-20'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3037,7 +3856,7 @@
 <td>获取24H及全网交易和存储数据定值(getTxStatistics)</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-19'>Response Data</h3>
+<h3 id='response-data-25'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3101,7 +3920,7 @@
 <td>24小时数据存储数量</td>
 </tr>
 </tbody></table>
-<h2 id='getbizconstants'>getBizConstants</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://192.168.0.234:7216/sharder?requestType=getBizConstants"</span>
+<h2 id='getbizconstants'>getBizConstants</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://IP:7216/sharder?requestType=getBizConstants"</span>
 </code></pre></div>
 <blockquote>
 <p>Response:</p>
@@ -3112,9 +3931,9 @@
   </span><span class="nl">"epochBeginning"</span><span class="p">:</span><span class="w"> </span><span class="mi">1471334888171</span><span class="p">,</span><span class="w">
   </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-20'>HTTP Request</h3>
-<p><code>GET http://192.168.0.10:7216/sharder</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
+</span></code></pre></div><h3 id='http-request-27'>HTTP Request</h3>
+<p><code>GET http://IP:7216/sharder</code></p>
+<h3 id='url-parameters-7'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3128,7 +3947,7 @@
 <td>获取时间常亮定值(getBizConstants)</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-20'>Response Data</h3>
+<h3 id='response-data-26'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Data</th>
@@ -3147,7 +3966,7 @@
 <td>请求处理时间</td>
 </tr>
 </tbody></table>
-<h2 id='getnextblockgenerators'>getNextBlockGenerators</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://192.168.0.234:7216/sharder?requestType=getNextBlockGenerators&amp;limit=99999"</span>
+<h2 id='getnextblockgenerators'>getNextBlockGenerators</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://IP:7216/sharder?requestType=getNextBlockGenerators&amp;limit=99999"</span>
 </code></pre></div>
 <blockquote>
 <p>Response:</p>
@@ -3208,9 +4027,9 @@
     </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">123992102</span><span class="p">,</span><span class="w">
     </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">13383</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-21'>HTTP Request</h3>
-<p><code>GET http://192.168.0.10:7216/sharder</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+</span></code></pre></div><h3 id='http-request-28'>HTTP Request</h3>
+<p><code>GET http://IP:7216/sharder</code></p>
+<h3 id='url-parameters-8'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3229,7 +4048,7 @@
 <td>获取数据量上限</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-21'>Response Data</h3>
+<h3 id='response-data-27'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Data</th>
