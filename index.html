@@ -340,15 +340,6 @@
                   <li>
                     <a href="#8286ab9070" class="toc-h2 toc-link" data-title="获取账户交易记录">获取账户交易记录</a>
                   </li>
-                  <li>
-                    <a href="#8d0dea3847" class="toc-h2 toc-link" data-title="旷工列表">旷工列表</a>
-                  </li>
-                  <li>
-                    <a href="#mw" class="toc-h2 toc-link" data-title="MW动态">MW动态</a>
-                  </li>
-                  <li>
-                    <a href="#24h" class="toc-h2 toc-link" data-title="24H及全网节点容量动态">24H及全网节点容量动态</a>
-                  </li>
               </ul>
           </li>
           <li>
@@ -432,7 +423,7 @@
                     <a href="#a2457e27ab" class="toc-h2 toc-link" data-title="根据账户编号或账户地址获取可用于交易的余额">根据账户编号或账户地址获取可用于交易的余额</a>
                   </li>
                   <li>
-                    <a href="#mw-2" class="toc-h2 toc-link" data-title="MW转账接口">MW转账接口</a>
+                    <a href="#mw" class="toc-h2 toc-link" data-title="MW转账接口">MW转账接口</a>
                   </li>
                   <li>
                     <a href="#78685ca14c" class="toc-h2 toc-link" data-title="查看交易是否确认">查看交易是否确认</a>
@@ -1755,272 +1746,6 @@
 <td></td>
 </tr>
 </tbody></table>
-<h2 id='8d0dea3847'>旷工列表</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="err">curl</span><span class="w"> </span><span class="s2">"https://IP/datacount?requestType=getNextBlockGenerators&amp;pagenum=1"</span><span class="w">
-</span></code></pre></div>
-<blockquote>
-<p>Response:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="nl">"generators"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-        </span><span class="nl">"accountRS"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CDW-4EA2-ZMN2-4DWL-DVPG2"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"AcountChukuaiNums"</span><span class="p">:</span><span class="w"> </span><span class="mi">118</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"pocScore"</span><span class="p">:</span><span class="w"> </span><span class="mi">20687000</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"bindPeerType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Community Node"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"hitTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">127518882</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"networkScore"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"performanceScore"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"nodeTypeScore"</span><span class="p">:</span><span class="w"> </span><span class="mi">3125</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"ssScore"</span><span class="p">:</span><span class="w"> </span><span class="mi">17000</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"hardwareScore"</span><span class="p">:</span><span class="w"> </span><span class="mi">562</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"AllChukuaiNums"</span><span class="p">:</span><span class="w"> </span><span class="mi">16462</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"diskCapacity"</span><span class="p">:</span><span class="w"> </span><span class="mf">1024.0</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"chukuiPercent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.7168%"</span><span class="w">
-    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"accountRS"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CDW-UXP4-S3WX-V79H-2H9HH"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"AcountChukuaiNums"</span><span class="p">:</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"pocScore"</span><span class="p">:</span><span class="w"> </span><span class="mi">57591000</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"bindPeerType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Soul Node"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"hitTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">127519116</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"networkScore"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"performanceScore"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"nodeTypeScore"</span><span class="p">:</span><span class="w"> </span><span class="mi">1875</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"ssScore"</span><span class="p">:</span><span class="w"> </span><span class="mi">1716</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"hardwareScore"</span><span class="p">:</span><span class="w"> </span><span class="mi">54000</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"AllChukuaiNums"</span><span class="p">:</span><span class="w"> </span><span class="mi">16463</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"diskCapacity"</span><span class="p">:</span><span class="w"> </span><span class="mf">103609.3</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"chukuiPercent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.2187%"</span><span class="w">
-    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"accountRS"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CDW-AJUF-L5FS-B6A6-3Z3CF"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"AcountChukuaiNums"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"pocScore"</span><span class="p">:</span><span class="w"> </span><span class="mi">57137000</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"bindPeerType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Soul Node"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"hitTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">127519160</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"networkScore"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"performanceScore"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"nodeTypeScore"</span><span class="p">:</span><span class="w"> </span><span class="mi">1875</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"ssScore"</span><span class="p">:</span><span class="w"> </span><span class="mi">1262</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"hardwareScore"</span><span class="p">:</span><span class="w"> </span><span class="mi">54000</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"AllChukuaiNums"</span><span class="p">:</span><span class="w"> </span><span class="mi">16463</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"diskCapacity"</span><span class="p">:</span><span class="w"> </span><span class="mf">103609.3</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"chukuiPercent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1397%"</span><span class="w">
-    </span><span class="p">}],</span><span class="w">
-    </span><span class="nl">"dataCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">687</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-8'>HTTP Request</h3>
-<p><code>GET http://IP/sharder</code></p>
-<h3 id='url-parameters-7'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>是否必须</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>requestType</td>
-<td>true</td>
-<td>获取账户交易信息类(默认getNextBlockGenerators)</td>
-</tr>
-<tr>
-<td>pagenum</td>
-<td>true</td>
-<td>页码数</td>
-</tr>
-</tbody></table>
-<h3 id='response-data-7'>Response Data</h3>
-<table><thead>
-<tr>
-<th>Data</th>
-<th>是否必须</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>accountRS</td>
-<td>true</td>
-<td>账户地址</td>
-</tr>
-<tr>
-<td>AcountChukuaiNums</td>
-<td>true</td>
-<td>账户出块数</td>
-</tr>
-<tr>
-<td>pocScore</td>
-<td>true</td>
-<td>poc得分</td>
-</tr>
-<tr>
-<td>bindPeerType</td>
-<td>true</td>
-<td>节点类型</td>
-</tr>
-<tr>
-<td>hitTime</td>
-<td>true</td>
-<td>预计出块时间(加时间常量有常量接口获取)</td>
-</tr>
-<tr>
-<td>networkScore</td>
-<td>true</td>
-<td>网络得分</td>
-</tr>
-<tr>
-<td>performanceScore</td>
-<td>true</td>
-<td>交易性能得分</td>
-</tr>
-<tr>
-<td>nodeTypeScore</td>
-<td>true</td>
-<td>节点类型得分</td>
-</tr>
-<tr>
-<td>ssScore</td>
-<td>true</td>
-<td>抵押得分</td>
-</tr>
-<tr>
-<td>hardwareScore</td>
-<td>true</td>
-<td>硬件得分</td>
-</tr>
-<tr>
-<td>AllChukuaiNums</td>
-<td>true</td>
-<td>全网出块数</td>
-</tr>
-<tr>
-<td>diskCapacity</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>chukuiPercent</td>
-<td>true</td>
-<td>账户出块率</td>
-</tr>
-</tbody></table>
-<h2 id='mw'>MW动态</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="err">curl</span><span class="w"> </span><span class="s2">"https://IP/datacount/mwdynamic"</span><span class="w">
-</span></code></pre></div>
-<blockquote>
-<p>Response:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="nl">"hight"</span><span class="p">:</span><span class="w"> </span><span class="mi">19026</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"pricenum"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.185</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"nodenum"</span><span class="p">:</span><span class="w"> </span><span class="mi">12320</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"Accountnum"</span><span class="p">:</span><span class="w"> </span><span class="mi">16600</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"transfernum"</span><span class="p">:</span><span class="w"> </span><span class="mi">63376</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"balancenumW"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4385.79万"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"circulatemarketvalue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5197.16万"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"qualifiedminernum"</span><span class="p">:</span><span class="w"> </span><span class="mi">5548</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"averageaward"</span><span class="p">:</span><span class="w"> </span><span class="mf">10.1</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-9'>HTTP Request</h3>
-<p><code>GET http://IP/datacount/mwdynamic</code></p>
-<h3 id='response-data-8'>Response Data</h3>
-<table><thead>
-<tr>
-<th>Data</th>
-<th>是否必须</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>hight</td>
-<td>true</td>
-<td>数据统计区块高度</td>
-</tr>
-<tr>
-<td>pricenum</td>
-<td>true</td>
-<td>当前场外价格</td>
-</tr>
-<tr>
-<td>nodenum</td>
-<td>true</td>
-<td>历史声明节点数</td>
-</tr>
-<tr>
-<td>Accountnum</td>
-<td>true</td>
-<td>全网账户地址数</td>
-</tr>
-<tr>
-<td>transfernum</td>
-<td>true</td>
-<td>全网交易总数</td>
-</tr>
-<tr>
-<td>balancenumW</td>
-<td>true</td>
-<td>当前流通总量</td>
-</tr>
-<tr>
-<td>circulatemarketvalue</td>
-<td>true</td>
-<td>当前流通市值</td>
-</tr>
-<tr>
-<td>qualifiedminernum</td>
-<td>true</td>
-<td>今日参与合格矿工收益数</td>
-</tr>
-<tr>
-<td>averageaward</td>
-<td>true</td>
-<td>合格矿工今日平均收益</td>
-</tr>
-</tbody></table>
-<h2 id='24h'>24H及全网节点容量动态</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="err">curl</span><span class="w"> </span><span class="s2">"https://IP/datacount/disktotal"</span><span class="w">
-</span></code></pre></div>
-<blockquote>
-<p>Response:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="nl">"diskTotalNum"</span><span class="p">:</span><span class="w"> </span><span class="s2">"974.35 PB"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"onliendiskTotalnum"</span><span class="p">:</span><span class="w"> </span><span class="s2">"67.88 PB"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"diskTotalNum24H"</span><span class="p">:</span><span class="w"> </span><span class="s2">"26.91 PB"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"shenmingCishu24H"</span><span class="p">:</span><span class="w"> </span><span class="s2">"268"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"currentQKhight"</span><span class="p">:</span><span class="w"> </span><span class="mi">19026</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-10'>HTTP Request</h3>
-<p><code>GET http://IP/datacount/disktotal</code></p>
-<h3 id='response-data-9'>Response Data</h3>
-<table><thead>
-<tr>
-<th>Data</th>
-<th>是否必须</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>diskTotalNum</td>
-<td>true</td>
-<td>全网容量</td>
-</tr>
-<tr>
-<td>onliendiskTotalnum</td>
-<td>true</td>
-<td>动态容量</td>
-</tr>
-<tr>
-<td>diskTotalNum24H</td>
-<td>true</td>
-<td>24小时新增节点容量</td>
-</tr>
-<tr>
-<td>shenmingCishu24H</td>
-<td>true</td>
-<td>24小时几点声明次数</td>
-</tr>
-<tr>
-<td>currentQKhight</td>
-<td>false</td>
-<td>当前统计数据高度</td>
-</tr>
-</tbody></table>
 <h1 id='api-3'>链上 API</h1><h2 id='getlatestcosversion'>getLatestCosVersion</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://IP:7216/sharder?requestType=getLatestCosVersion"</span>
 </code></pre></div>
 <blockquote>
@@ -2036,7 +1761,7 @@
     </span><span class="nl">"bakMode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"delete"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-11'>HTTP Request</h3>
+</span></code></pre></div><h3 id='http-request-8'>HTTP Request</h3>
 <p><code>GET http://IP:7216/sharder</code></p>
 <h3 id='query-parameters-2'>Query Parameters</h3>
 <table><thead>
@@ -2052,7 +1777,7 @@
 <td>获取版本信息定值(getLatestCosVersion)</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-10'>Response Data</h3>
+<h3 id='response-data-7'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2168,7 +1893,7 @@
       </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">11532</span><span class="w">
     </span><span class="p">}]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-12'>HTTP Request</h3>
+</span></code></pre></div><h3 id='http-request-9'>HTTP Request</h3>
 <p><code>GET http://IP:7216/sharder</code></p>
 <h3 id='query-parameters-3'>Query Parameters</h3>
 <table><thead>
@@ -2204,7 +1929,7 @@
 <td>数据类型(0转账,9出块,12节点声明)</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-11'>Response Data</h3>
+<h3 id='response-data-8'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2562,7 +2287,7 @@
     </span><span class="p">}]</span><span class="err">,</span><span class="w">
   </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-13'>HTTP Request</h3>
+</span></code></pre></div><h3 id='http-request-10'>HTTP Request</h3>
 <p><code>GET http://IP:7216/sharder</code></p>
 <h3 id='query-parameters-4'>Query Parameters</h3>
 <table><thead>
@@ -2598,7 +2323,7 @@
 <td>默认false,当为true时返回所有声明信息</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-12'>Response Data</h3>
+<h3 id='response-data-9'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2768,7 +2493,7 @@
   </span><span class="p">],</span><span class="w">
   </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-14'>HTTP Request</h3>
+</span></code></pre></div><h3 id='http-request-11'>HTTP Request</h3>
 <p><code>GET http://IP:7216/sharder</code></p>
 <h3 id='query-parameters-5'>Query Parameters</h3>
 <table><thead>
@@ -2794,7 +2519,7 @@
 <td>随机数</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-13'>Response Data</h3>
+<h3 id='response-data-10'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -2857,7 +2582,7 @@
   </span><span class="nl">"sharder.maxNumberOfShufflers"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"sharder.NATServiceAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-15'>HTTP Request</h3>
+</span></code></pre></div><h3 id='http-request-12'>HTTP Request</h3>
 <p><code>GET http://IP:7216/sharder</code></p>
 <h3 id='query-parameters-6'>Query Parameters</h3>
 <table><thead>
@@ -2878,7 +2603,7 @@
 <td>随机数</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-14'>Response Data</h3>
+<h3 id='response-data-11'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3115,7 +2840,7 @@
   </span><span class="nl">"cosLastUpgradeDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-06-09 01:01:01"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"lastBlockchainFeeder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testboot.mw.run"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-16'>HTTP Request</h3>
+</span></code></pre></div><h3 id='http-request-13'>HTTP Request</h3>
 <p><code>GET http://IP:7216/sharder</code></p>
 <h3 id='query-parameters-7'>Query Parameters</h3>
 <table><thead>
@@ -3136,7 +2861,7 @@
 <td>随机数</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-15'>Response Data</h3>
+<h3 id='response-data-12'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3319,7 +3044,7 @@
   </span><span class="nl">"account"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4597741060539866770"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"frozenBalanceNQT"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-17'>HTTP Request</h3>
+</span></code></pre></div><h3 id='http-request-14'>HTTP Request</h3>
 <p><code>GET http://IP:7216/sharder</code></p>
 <h3 id='query-parameters-8'>Query Parameters</h3>
 <table><thead>
@@ -3365,7 +3090,7 @@
 <td>是否包含有效余额默认false</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-16'>Response Data</h3>
+<h3 id='response-data-13'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3467,7 +3192,7 @@
     </span><span class="p">}],</span><span class="w">
     </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-18'>HTTP Request</h3>
+</span></code></pre></div><h3 id='http-request-15'>HTTP Request</h3>
 <p><code>POST http://IP:7216/sharder</code></p>
 <h3 id='query-parameters-9'>Query Parameters</h3>
 <table><thead>
@@ -3507,7 +3232,7 @@
 <td>是否为矿池</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-17'>Response Data</h3>
+<h3 id='response-data-14'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Data</th>
@@ -3631,7 +3356,7 @@
     </span><span class="nl">"forgersCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-19'>HTTP Request</h3>
+</span></code></pre></div><h3 id='http-request-16'>HTTP Request</h3>
 <p><code>POST http://IP:7216/sharder</code></p>
 <h3 id='query-parameters-10'>Query Parameters</h3>
 <table><thead>
@@ -3647,7 +3372,7 @@
 <td>定值(stopMining)</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-18'>Response Data</h3>
+<h3 id='response-data-15'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3680,7 +3405,7 @@
   </span><span class="nl">"numberOfPurchases"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-20'>HTTP Request</h3>
+</span></code></pre></div><h3 id='http-request-17'>HTTP Request</h3>
 <p><code>GET http://IP:7216/sharder</code></p>
 <h3 id='query-parameters-11'>Query Parameters</h3>
 <table><thead>
@@ -3716,7 +3441,7 @@
 <td>随机数</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-19'>Response Data</h3>
+<h3 id='response-data-16'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3746,7 +3471,7 @@
   </span><span class="p">],</span><span class="w">
   </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-21'>HTTP Request</h3>
+</span></code></pre></div><h3 id='http-request-18'>HTTP Request</h3>
 <p><code>GET http://IP:7216/sharder</code></p>
 <h3 id='query-parameters-12'>Query Parameters</h3>
 <table><thead>
@@ -3772,7 +3497,7 @@
 <td>随机数</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-20'>Response Data</h3>
+<h3 id='response-data-17'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3808,7 +3533,7 @@
   </span><span class="nl">"numberOfAliases"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-22'>HTTP Request</h3>
+</span></code></pre></div><h3 id='http-request-19'>HTTP Request</h3>
 <p><code>GET http://IP:7216/sharder</code></p>
 <h3 id='query-parameters-13'>Query Parameters</h3>
 <table><thead>
@@ -3834,7 +3559,7 @@
 <td>随机数</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-21'>Response Data</h3>
+<h3 id='response-data-18'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3864,7 +3589,7 @@
   </span><span class="p">],</span><span class="w">
   </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-23'>HTTP Request</h3>
+</span></code></pre></div><h3 id='http-request-20'>HTTP Request</h3>
 <p><code>GET http://IP:7216/sharder</code></p>
 <h3 id='query-parameters-14'>Query Parameters</h3>
 <table><thead>
@@ -3885,7 +3610,7 @@
 <td>随机数</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-22'>Response Data</h3>
+<h3 id='response-data-19'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3910,7 +3635,7 @@
 
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-24'>HTTP Request</h3>
+</span></code></pre></div><h3 id='http-request-21'>HTTP Request</h3>
 <p><code>GET http://IP:7216/sharder</code></p>
 <h3 id='query-parameters-15'>Query Parameters</h3>
 <table><thead>
@@ -3946,7 +3671,7 @@
 <td>随机数</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-23'>Response Data</h3>
+<h3 id='response-data-20'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -3969,7 +3694,7 @@
   </span><span class="nl">"publicKey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"269670d2f58d5d663dc469ab7cd42e36c096d2d488fb4c7b57279157cb87a417"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-25'>HTTP Request</h3>
+</span></code></pre></div><h3 id='http-request-22'>HTTP Request</h3>
 <p><code>GET http://IP:7216/sharder</code></p>
 <h3 id='query-parameters-16'>Query Parameters</h3>
 <table><thead>
@@ -3995,7 +3720,7 @@
 <td>随机数</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-24'>Response Data</h3>
+<h3 id='response-data-21'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4111,7 +3836,7 @@
     </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">6212</span><span class="p">,</span><span class="w">
     </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">119666081</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-26'>HTTP Request</h3>
+</span></code></pre></div><h3 id='http-request-23'>HTTP Request</h3>
 <p><code>GET http://IP:7216/sharder</code></p>
 <h3 id='query-parameters-17'>Query Parameters</h3>
 <table><thead>
@@ -4142,7 +3867,7 @@
 <td>是否包含交易详情(默认false)</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-25'>Response Data</h3>
+<h3 id='response-data-22'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4444,7 +4169,7 @@
   </span><span class="p">],</span><span class="w">
   </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-27'>HTTP Request</h3>
+</span></code></pre></div><h3 id='http-request-24'>HTTP Request</h3>
 <p><code>GET http://IP:7216/sharder</code></p>
 <h3 id='query-parameters-18'>Query Parameters</h3>
 <table><thead>
@@ -4465,7 +4190,7 @@
 <td>账户ID</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-26'>Response Data</h3>
+<h3 id='response-data-23'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4529,7 +4254,7 @@
   </span><span class="nl">"ecBlockHeight"</span><span class="p">:</span><span class="w"> </span><span class="mi">5491</span><span class="err">,</span><span class="w">
   </span><span class="nl">"transaction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"13854539770161423054"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-28'>HTTP Request</h3>
+</span></code></pre></div><h3 id='http-request-25'>HTTP Request</h3>
 <p><code>GET http://IP:7216/sharder</code></p>
 <h3 id='query-parameters-19'>Query Parameters</h3>
 <table><thead>
@@ -4550,7 +4275,7 @@
 <td>交易ID</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-27'>Response Data</h3>
+<h3 id='response-data-24'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4727,7 +4452,7 @@
   </span><span class="nl">"transferAmount24H"</span><span class="p">:</span><span class="w"> </span><span class="mi">2833361</span><span class="p">,</span><span class="w">
   </span><span class="nl">"storageCount24H"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-29'>HTTP Request</h3>
+</span></code></pre></div><h3 id='http-request-26'>HTTP Request</h3>
 <p><code>GET http://IP:7216/sharder</code></p>
 <h3 id='query-parameters-20'>Query Parameters</h3>
 <table><thead>
@@ -4743,7 +4468,7 @@
 <td>获取24H及全网交易和存储数据定值(getTxStatistics)</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-28'>Response Data</h3>
+<h3 id='response-data-25'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4818,9 +4543,9 @@
   </span><span class="nl">"epochBeginning"</span><span class="p">:</span><span class="w"> </span><span class="mi">1471334888171</span><span class="p">,</span><span class="w">
   </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-30'>HTTP Request</h3>
+</span></code></pre></div><h3 id='http-request-27'>HTTP Request</h3>
 <p><code>GET http://IP:7216/sharder</code></p>
-<h3 id='url-parameters-8'>URL Parameters</h3>
+<h3 id='url-parameters-7'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4834,7 +4559,7 @@
 <td>获取时间常亮定值(getBizConstants)</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-29'>Response Data</h3>
+<h3 id='response-data-26'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Data</th>
@@ -4914,9 +4639,9 @@
     </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">123992102</span><span class="p">,</span><span class="w">
     </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">13383</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-31'>HTTP Request</h3>
+</span></code></pre></div><h3 id='http-request-28'>HTTP Request</h3>
 <p><code>GET http://IP:7216/sharder</code></p>
-<h3 id='url-parameters-9'>URL Parameters</h3>
+<h3 id='url-parameters-8'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -4935,7 +4660,7 @@
 <td>获取数据量上限</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-30'>Response Data</h3>
+<h3 id='response-data-27'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Data</th>
@@ -5081,7 +4806,7 @@
   </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="nl">"account"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12038312562070949367"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-32'>HTTP Request</h3>
+</span></code></pre></div><h3 id='http-request-29'>HTTP Request</h3>
 <p><code>GET http://IP:7216/sharder</code></p>
 <h3 id='query-parameters-21'>Query Parameters</h3>
 <table><thead>
@@ -5102,7 +4827,7 @@
 <td>密钥</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-31'>Response Data</h3>
+<h3 id='response-data-28'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -5145,7 +4870,7 @@
   </span><span class="nl">"publicKey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"e3f81347569688e38041a7315e8edc7598770cede832c55957d01bd9dd5e741b"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-33'>HTTP Request</h3>
+</span></code></pre></div><h3 id='http-request-30'>HTTP Request</h3>
 <p><code>GET http://IP:7216/sharder</code></p>
 <h3 id='query-parameters-22'>Query Parameters</h3>
 <table><thead>
@@ -5166,7 +4891,7 @@
 <td>账户地址</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-32'>Response Data</h3>
+<h3 id='response-data-29'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -5204,7 +4929,7 @@
   </span><span class="nl">"account"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12038312562070949367"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"frozenBalanceNQT"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-34'>HTTP Request</h3>
+</span></code></pre></div><h3 id='http-request-31'>HTTP Request</h3>
 <p><code>GET http://IP:7216/sharder</code></p>
 <h3 id='query-parameters-23'>Query Parameters</h3>
 <table><thead>
@@ -5245,7 +4970,7 @@
 <td>值必须为true</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-33'>Response Data</h3>
+<h3 id='response-data-30'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -5314,7 +5039,7 @@
 <td></td>
 </tr>
 </tbody></table>
-<h2 id='mw-2'>MW转账接口</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://IP:7216/sharder?requestType=sendMoney"</span>
+<h2 id='mw'>MW转账接口</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://IP:7216/sharder?requestType=sendMoney"</span>
 </code></pre></div>
 <blockquote>
 <p>request data:</p>
@@ -5382,7 +5107,7 @@
     </span><span class="nl">"errorDescription"</span><span class="p">:</span><span class="s2">"Unknown account"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"errorCode"</span><span class="p">:</span><span class="mi">5</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-35'>HTTP Request</h3>
+</span></code></pre></div><h3 id='http-request-32'>HTTP Request</h3>
 <p><code>POST http://IP:7216/sharder</code></p>
 <h3 id='query-parameters-24'>Query Parameters</h3>
 <table><thead>
@@ -5462,7 +5187,7 @@
 <td>发送者密钥</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-34'>Response Data</h3>
+<h3 id='response-data-31'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -5666,7 +5391,7 @@
   </span><span class="p">],</span><span class="w">
   </span><span class="nl">"requestProcessingTime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='http-request-36'>HTTP Request</h3>
+</span></code></pre></div><h3 id='http-request-33'>HTTP Request</h3>
 <p><code>GET http://IP:7216/sharder</code></p>
 <h3 id='query-parameters-25'>Query Parameters</h3>
 <table><thead>
@@ -5687,7 +5412,7 @@
 <td>账户地址或账户编号</td>
 </tr>
 </tbody></table>
-<h3 id='response-data-35'>Response Data</h3>
+<h3 id='response-data-32'>Response Data</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
