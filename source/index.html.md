@@ -2554,11 +2554,11 @@ curl "http://IP:7216/sharder?requestType=sendMoney"
 
 ### 转账接口中离线签名模式流程图
 
-![](images/2020-10-12-15-24-45.png)
+![](https://mwfs.oss-cn-shenzhen.aliyuncs.com/docs/2_20201012155304.png)
 
 ### 转账接口内部逻辑流程图
 
-![](images/2020-10-12-15-08-19.png)
+![](https://mwfs.oss-cn-shenzhen.aliyuncs.com/docs/1_20201012155258.png)
 
 
 ## 查看交易是否确认
