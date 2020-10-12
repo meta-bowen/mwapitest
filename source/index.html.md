@@ -2402,63 +2402,51 @@ curl "http://IP:7216/sharder?requestType=sendMoney"
 
 ```json
 {
-    "recipient": "CDW-5MUB-G7LB-FT9S-FVJKS",
-    "recipientPublicKey": "e3f81347569688e38041a7315e8edc7598770cede832c55957d01bd9dd5e741b",
+    "recipient": "CDW-9WKZ-DV7P-M6MN-5MH8B",
+    "recipientPublicKey": "1e050e54f1c5516958d577380a223ea317865ff21523083ac2068e34b8237811",
     "deadline": 1440,
-    "phased": False,
-    "phasingLinkedFullHash": '',
-    "phasingHashedSecret": '',
-    "phasingHashedSecretAlgorithm": 2,
-    "publicKey": '',
     "feeNQT": 100000000,//1MW
     "amountNQT": 100000000,//1MW
-    "secretPhrase": "hill pants completely pack nice pathetic slide fail sail message agree destroy"
-
+    "secretPhrase": "finish rant princess crimson cold forward such known lace built poetry ceiling" // 符合相关条件时不发送该密钥至服务端时用于本地离线签名
 }
 ```
 
 > Response:
 
 ```json
-//发送成功返回
+//发送成功返回（离线签名情况）
 {
-	"signatureHash": "01fe4ec3f84b2914b363d201635c681908020439edf3e2b050d1b7b2501d4ace",
 	"transactionJSON": {
-		"senderPublicKey": "be9531ebf8fa65128d562daa01ed49dbb0540e8119213f91921eeb51020cc410",
-		"signature": "500fd5105669c06f4b6a5a4570c25ff32c5f55701a496ddb63842469ad59930f7762a8d32baf569643dee287bf8bd05e4b53696f9c7640e6c1a2a01ef002eb63",
-		"feeNQT": "100000000",//1MW
+		"senderPublicKey": "2dd12b457c73f1ded3bf0565034c1843ec8048a3d9964eea29de558af0320859",
+		"feeNQT": "100000000",
 		"type": 0,
-		"fullHash": "6af42738eb54ebd22150e6d5f446ae55cba2e0ef61435dd9176fe5494c86d606",
 		"version": 3,
 		"phased": false,
-		"ecBlockId": "16226261798395275171",
-		"accountId": "-6408431511638602249",
-		"signatureHash": "01fe4ec3f84b2914b363d201635c681908020439edf3e2b050d1b7b2501d4ace",
+		"ecBlockId": "6840612405442241818",
+		"accountId": "9011521658538046719",
 		"attachment": {
-			"crowdMinerRewardAmount": 66700000000, // 667MW
+			"crowdMinerRewardAmount": 66700000000,
 			"version.OrdinaryPayment": 0,
 			"version.PublicKeyAnnouncement": 1,
-			"recipientPublicKey": "e3f81347569688e38041a7315e8edc7598770cede832c55957d01bd9dd5e741b",
-			"blockMiningRewardAmount": 66600000000 //666MW
+			"recipientPublicKey": "1e050e54f1c5516958d577380a223ea317865ff21523083ac2068e34b8237811",
+			"blockMiningRewardAmount": 66600000000
 		},
-		"senderRS": "CDW-T5HR-HTCP-8A97-CF76G",
+		"senderRS": "CDW-EF9Z-8J9G-LLHC-9VU5U",
 		"subtype": 0,
-		"amountNQT": "100000000", //1MW
-		"sender": "12038312562070949367",
-		"recipientRS": "CDW-5MUB-G7LB-FT9S-FVJKS",
-		"recipient": "15872404110546423625",
-		"ecBlockHeight": 17591,
+		"amountNQT": "123400000",
+		"sender": "9011521658538046719",
+		"recipientRS": "CDW-9WKZ-DV7P-M6MN-5MH8B",
+		"recipient": "3790328149872734783",
+		"ecBlockHeight": 0,
 		"deadline": 1440,
-		"transaction": "15198334736728061034",
-		"timestamp": 127088938,
+		"timestamp": 131140921,
 		"height": 2147483647
 	},
-	"unsignedTransactionBytes": "00302a399307a005be9531ebf8fa65128d562daa01ed49dbb0540e8119213f91921eeb51020cc41049cf9164711b46dc00e1f5050000000000e1f5050000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004000000b7440000a367d79d22432fe101e3f81347569688e38041a7315e8edc7598770cede832c55957d01bd9dd5e741b",
+	"unsignedTransactionBytes": "0030390dd107a0052dd12b457c73f1ded3bf0565034c1843ec8048a3d9964eea29de558af03208593ff253cb5ef3993440ef5a070000000000e1f5050000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004000000000000001ae58358bdbcee5e011e050e54f1c5516958d577380a223ea317865ff21523083ac2068e34b8237811",
 	"broadcasted": true,
-	"requestProcessingTime": 6,
-	"transactionBytes": "00302a399307a005be9531ebf8fa65128d562daa01ed49dbb0540e8119213f91921eeb51020cc41049cf9164711b46dc00e1f5050000000000e1f505000000000000000000000000000000000000000000000000000000000000000000000000500fd5105669c06f4b6a5a4570c25ff32c5f55701a496ddb63842469ad59930f7762a8d32baf569643dee287bf8bd05e4b53696f9c7640e6c1a2a01ef002eb6304000000b7440000a367d79d22432fe101e3f81347569688e38041a7315e8edc7598770cede832c55957d01bd9dd5e741b",
-	"fullHash": "6af42738eb54ebd22150e6d5f446ae55cba2e0ef61435dd9176fe5494c86d606",
-	"transaction": "15198334736728061034"
+	"requestProcessingTime": 5144,
+	"transaction": "17788889992935799038",
+	"fullHash": "fe7870f132d5def6185017fd9eedc7fa5a363bf7e7fa79395afb560a3dc4343e"
 }
 //发送失败返回
 {
@@ -2473,33 +2461,33 @@ curl "http://IP:7216/sharder?requestType=sendMoney"
 
 ### Query Parameters
 
-| Parameter  | 是否必须 | Description                     |
-| ---------- | -------- | ------------------------------- |
-| getAccount | true     | 根据账户余额信息定值(sendMoney) |
+| Parameter   | 是否必须 | Description                                   |
+| ----------- | -------- | --------------------------------------------- |
+| requestType | true     | MW转账接口(sendMoney) |
+
+
 
 ### Request Data
 
-| Parameter                    | 是否必须 | Description                                     |
+| Parameter                    | 是否必须 | Description |
 | ---------------------------- | -------- | ----------------------------------------------- |
-| recipient                    | true     | 接收者账户地址                                  |
-| recipientPublicKey           | false    | 接收者公钥                                      |
+| recipient                    | true     | 接收者账户地(可由公钥生成账户地址)                                  |
+| recipientPublicKey           | true    | 接收者公钥                                      |
 | deadline                     | true     |                                                 |
-| phased                       | true     |                                                 |
-| phasingLinkedFullHash        | true     |                                                 |
-| phasingHashedSecret          | true     |                                                 |
-| phasingHashedSecretAlgorithm | true     |                                                 |
+| phased                       | false     |                                                 |
+| phasingLinkedFullHash        | false    |                                                 |
+| phasingHashedSecret          | false    |                                                 |
+| phasingHashedSecretAlgorithm | false    |                                                 |
 | publicKey                    | false    | 发送者公钥                                      |
 | feeNQT                       | true     | 转账手续费(最小值少为1MW, 注意请求示例中的换算) |
 | amountNQT                    | true     | 转账数量(注意请求示例中的换算)                  |
 | secretPhrase                 | true     | 发送者密钥                                      |
 
-### Response Data
+### Response Data（离线签名情况）
 
 | Parameter                | type | Description                                                  |
 | ------------------------ | ---- | ------------------------------------------------------------ |
-| signatureHash            | str  | 可用于交易的余额                                             |
 | senderPublicKey          | str  | 发送者公钥                                                   |
-| signature                | str  | 签名                                                         |
 | feeNQT                   | str  | 交易手续费(注意返回示例中的换算)                             |
 | type                     | int  | 交易类型                                                     |
 | fullHash                 | str  | 完整哈希                                                     |
@@ -2507,7 +2495,41 @@ curl "http://IP:7216/sharder?requestType=sendMoney"
 | phased                   | bool |                                                              |
 | ecBlockId                | str  |                                                              |
 | accountId                | str  | 账户ID                                                       |
+| crowdMinerRewardAmount   | int  |                                                              |
+| version.OrdinaryPayment  | int  |                                                              |
+| version.PublicKeyAnnouncement  | int  |                                                              |
+| blockMiningRewardAmount  | int  |                                                              |
+| senderRS                 | str  | 发送者账户地址                                               |
+| subtype                  | int  |                                                              |
+| amountNQT                | str  | 交易金额(注意返回示例中的换算)                               |
+| sender                   | str  | 发送者账户编号                                               |
+| recipientRS              | str  | 接收者账户地址                                               |
+| recipient                | str  | 接收者账户编号                                               |
+| ecBlockHeight            | int  |                                                              |
+| deadline                 | int  |                                                              |
+| timestamp                | int  | 交易时间戳(需要加上创世纪时间,其可通过getBizConstants接口获得) |
+| height                   | int  | 区块高度                                                             |
+| unsignedTransactionBytes | str  |                                                              |
+| broadcasted              | bool | true为转账发送成功,false为转账发送失败                       |
+| requestProcessingTime    | int  |                                                              |
+| transaction         | str  |                    生成的交易ID                                          |
+| errorDescription         | str  | 失败描述                                                     |
+| errorCode                | int  | 失败编号                                                     |
+
+### Response Data（非离线签名情况）
+
+| Parameter                | type | Description                                                  |
+| ------------------------ | ---- | ------------------------------------------------------------ |
 | signatureHash            | str  | 哈希签名                                                     |
+| signature                | str  | 签名                                                         |
+| senderPublicKey          | str  | 发送者公钥                                                   |
+| feeNQT                   | str  | 交易手续费(注意返回示例中的换算)                             |
+| type                     | int  | 交易类型                                                     |
+| fullHash                 | str  | 完整哈希                                                     |
+| version                  | str  | 版本                                                         |
+| phased                   | bool |                                                              |
+| ecBlockId                | str  |                                                              |
+| accountId                | str  | 账户ID                                                       |
 | crowdMinerRewardAmount   | int  |                                                              |
 | version.OrdinaryPayment  | int  |                                                              |
 | blockMiningRewardAmount  | int  |                                                              |
@@ -2520,14 +2542,24 @@ curl "http://IP:7216/sharder?requestType=sendMoney"
 | ecBlockHeight            | int  |                                                              |
 | deadline                 | int  |                                                              |
 | transaction              | str  | 交易ID                                                       |
+| transactionBytes         | str  |                                                              |
 | timestamp                | int  | 交易时间戳(需要加上创世纪时间,其可通过getBizConstants接口获得) |
 | height                   | int  |                                                              |
 | unsignedTransactionBytes | str  |                                                              |
 | broadcasted              | bool | true为转账发送成功,false为转账发送失败                       |
 | requestProcessingTime    | int  |                                                              |
-| transactionBytes         | str  |                                                              |
 | errorDescription         | str  | 失败描述                                                     |
 | errorCode                | int  | 失败编号                                                     |
+
+
+### 转账接口中离线签名模式流程图
+
+![](images/2020-10-12-15-24-45.png)
+
+### 转账接口内部逻辑流程图
+
+![](images/2020-10-12-15-08-19.png)
+
 
 ## 查看交易是否确认
 
