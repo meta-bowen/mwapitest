@@ -2556,10 +2556,6 @@ curl "http://IP:7216/sharder?requestType=sendMoney"
 
 ![](https://mwfs.oss-cn-shenzhen.aliyuncs.com/docs/2_20201012155304.png)
 
-### 转账接口内部逻辑流程图
-
-![](https://mwfs.oss-cn-shenzhen.aliyuncs.com/docs/1_20201012155258.png)
-
 
 ## 查看交易是否确认
 
